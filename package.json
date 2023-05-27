@@ -1,0 +1,43 @@
+{
+  "name": "solidity-template",
+  "scripts": {
+    "clean": "rm -rf ./artifacts ./cache ./typechain",
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy": "hardhat deploy:contract",
+    "deploy:proxy": "hardhat deploy:proxy",
+    "deploy:create2Factory": "hardhat deploy:create2Factory",
+    "deploy:contractFromCreate2Factory": "hardhat deploy:contractFromCreate2Factory",
+    "deploy:proxyFromCreate2Factory": "hardhat deploy:proxyFromCreate2Factory",
+    "upgrade": "hardhat upgrade",
+    "verify": "hardhat verify:contract",
+    "verify:proxy": "hardhat verify:proxy",
+    "verify:goerli": "hardhat run --network goerli scripts/verify.ts",
+    "test": "rm -r test/__snapshots__ & hardhat test",
+    "test:gas": "hardhat test --grep gas",
+    "eslint": "eslint -c .eslintrc \"./**/*.ts\"",
+    "eslint:fix": "eslint --fix \"./src/*.ts\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@openzeppelin/hardhat-upgrades": "^1.22.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.45",
+    "@uniswap/snapshot-gas-cost": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "ericlint": "^1.1.9",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.14.0",
+    "hardhat-gas-reporter": "^1.0.2",
+    "mocha": "^9.2.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.8.2"
+  }
+}
